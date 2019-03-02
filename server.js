@@ -1,5 +1,7 @@
+require('dotenv').config()
 var express = require("express");
 var app = express();
+var db = require("./models");
 
 var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
@@ -17,6 +19,8 @@ app.use(routes);
 
 
 
-app.listen(PORT, function() {
-  console.log("App listening on PORT: " + PORT);
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
 });
