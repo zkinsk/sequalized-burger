@@ -75,6 +75,7 @@ end modal css
 
 .eatBoxes {
   overflow-y: scroll;
+  overflow-x: hidden;
   height: 160px;
   background-color: #325b0b51;
   background-blend-mode: color;
