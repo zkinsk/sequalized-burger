@@ -11,6 +11,11 @@ h1 {font-family: 'Bonbon', cursive;
   font-size: 500%;
   text-shadow: 0 0 2px black;
 }
+h4{
+  color: red;
+  text-shadow: 0 0 2px black;
+}
+
 .jumbotron{
   background-color: transparent;
 }

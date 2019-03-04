@@ -1,7 +1,6 @@
 var express = require("express");
 var router = express.Router();
 
-// Import the model (cat.js) to use its database functions.
 var db = require("../models");
 
 // Get all burgers from database for display
@@ -17,13 +16,9 @@ router.get("/", function(req, res) {
     })
     // console.log(data);
     burgersToEat.reverse();
-    res.render("index", {title:"Eat Dat Burger", burgersToEat: burgersToEat, burgersAte: burgersAte});
+    res.render("index", {title:"Eat Dat Burger - 2", burgersToEat: burgersToEat, burgersAte: burgersAte});
   });
 });
-//     // res.render("index", {title:"Eat Dat Burger", burgers: data}); I tried to send just the data and let handlebars sort it with if & unless, 
-//     // but I couldn't get the else statements I have in there to work correctly with the if and unless statements
-//   });
-// });
 
 // post a new burger to the database
 router.post("/api/burger", function(req, res) {
